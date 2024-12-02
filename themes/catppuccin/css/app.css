@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .form-label {
+        @apply bg-ctp-surface0 absolute left-[9px] top-px text-sm text-ctp-subtext1 transition-all duration-300 px-1 transform -translate-y-1/2 pointer-events-none peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-base group-focus-within:!top-px group-focus-within:!text-sm group-focus-within:!text-logo rounded-md;
+    }
+
+    .form-input {
+        @apply bg-ctp-crust border-ctp-surface0 w-full px-3 py-3 rounded-md shadow-sm outline-none focus:ring-1 focus:ring-ctp-blue border transition-all ease-in-out;
+    }
+
+    .form-input.is-invalid {
+        @apply border-ctp-red;
+    }
+
+    .form-submit {
+        @apply px-4 py-2 font-bold rounded-md bg-ctp-blue text-ctp-base hover:bg-opacity-50 duration-300;
+    }
+
+    .prose {
+        @apply prose-code:before:content-none prose-code:after:content-none min-w-full;
+    }
+
+    .prose > * {
+        @apply my-0;
+    }
+
+    .button {
+        @apply inline-block py-2 px-4 rounded-md text-center font-sans font-medium focus:ring-2 ring-ctp-blue duration-300;
+    }
+
+    .button-primary {
+        @apply bg-ctp-blue text-ctp-base hover:bg-opacity-50 focus:bg-opacity-50;
+    }
+
+    .button-secondary {
+        @apply bg-ctp-crust hover:bg-opacity-50 focus:bg-opacity-50;
+    }
+
+    .button-danger {
+        @apply bg-ctp-red text-ctp-base hover:bg-opacity-50 focus:bg-opacity-50;
+    }
+
+    .button-success {
+        @apply bg-ctp-green text-ctp-base hover:bg-opacity-50 focus:bg-opacity-50;
+    }
+
+    .button-primary-outline {
+        @apply hover:bg-ctp-blue hover:text-ctp-text focus:bg-ctp-blue focus:text-ctp-text;
+    }
+
+    .button-secondary-outline {
+        @apply hover:bg-ctp-crust hover:text-ctp-text focus:bg-ctp-crust focus:text-ctp-text;
+    }
+
+    .button-danger-outline {
+        @apply hover:bg-danger-400 hover:text-ctp-text focus:bg-danger-400 focus:text-ctp-text;
+    }
+
+    .button-success-outline {
+        @apply hover:bg-success-400 hover:text-ctp-text focus:bg-success-400 focus:text-ctp-text;
+    }
+
+    .content {
+        @apply container mx-auto items-center px-4 mt-8;
+    }
+
+    .content-box {
+        @apply bg-ctp-mantle px-6 py-5 rounded-2xl duration-300;
+    }
+}
+
+/* :root {
+    --danger-50: #ffebeb;
+    --danger-100: #fdcfcf;
+    --danger-200: #ef9595;
+    --danger-300: #db5858;
+    --danger-400: #dc3a3a;
+
+    --success-50: #ebfff1;
+    --success-100: #b5efce;
+    --success-200: #86dea0;
+    --success-300: #82ce91;
+    --success-400: #4eb165;
+} */
+
+.form-label[type="file"] {
+    background: rgb(var(--ctp-surface0)) !important;
+}
+
+* {
+    scrollbar-color: rgb(var(--ctp-surface0)) rgb(var(--ctp-surface0));
+}
+
+*::-webkit-scrollbar {
+    width: 15px;
+    box-shadow: 0 0 0 1px rgb(var(--ctp-mantle));
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+}
